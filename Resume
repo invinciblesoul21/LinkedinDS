@@ -1,0 +1,292 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Mayank Kumar Mishra} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Program
+\newcommand{\roll}{230103022} % Your Roll No.
+\newcommand{\phone}{9110976505} % Your Phone Number
+\newcommand{\emaila}{mayankmishra2k3@gmail.com} %Email 1
+\newcommand{\emailb}{mayank2.230103022@iiitbh.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{iiitbh_logo.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Mechatronics and Automation Engineering} &  \href{https://github.com/invinciblesoul21}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/invinciblesoul21}} \\
+  {Indian Institute Of Information Technology, Bhagalpur} & \href{https://www.linkedin.com/in/mayank-kumar-mishra-2587aa28a/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {linkedin.com/in/mayank-kumar-mishra-2587aa28a/}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology,Bhagalpur}{CGPA/Percentage: 6.76}
+      {B.Tech in Mechatronics and Automation Engineering}{Sep 2023-July 2027}
+    \resumeSubheading
+      {Kendriya Vidyalaya Karauli, 12th}{CGPA/Percentage: 95}
+      {Central Board of Secondary Education}{July 2021}
+    \resumeSubheading
+      {Kendriya Vidyalaya Karauli, 10th}{CGPA/Percentage: 91.40}
+      {Central Board of Secondary Education}{May 2019}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{:Hindi and English } \\
+     \textbf{Developer Tools}{:Visual Studio Code,GitHub,Jupyter NoteBook,Google Colab } \\
+     \textbf{Frameworks}{:Scikit-learn } \\
+     \textbf{Cloud/Databases}{:MySQL,MongoDB } \\
+     \textbf{Soft Skills}{:Communication,Teamwork,Problem-solving,Time Management} \\
+     \textbf{Coursework}{:Completed studies in Data Visualization (Power BI, Matplotlib), Statistics (probability, regression, hypothesis testing), and introductory Machine Learning (supervised learning, model evaluation) } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------EXPERIENCE-----------------
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Quality of Life Interactive Dashboard} %Project Name
+      {Power BI dashboard fueled by varied Excel/CSV data: socioeconomic, health, environment, safety.} %Project Name, Location Name
+      {February 2025} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Microsoft PowerBI,Microsoft Excel}
+        \item { Generated an interactive Power BI dashboard visualizing key quality of life metrics, enabling trend identification and comparative analysis}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Exploratory Data Analysis and Statistical Inference} %Project Name
+      {Raw data—a mix of measurements, labels, and spatial dimensions awaiting transformation into insights.} %Project Name, Location Name
+      {March 2025} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Seaborn,Pandas,Matplotlib,Python}
+        \item {Seaborn visualizations and statistical test results (covariance, correlation, skewness, Z/T/Chi-square/F/ANOVA tests) revealing data patterns and validated hypotheses.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------Certification-----------------
+\section{Certification}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Career Essentials in Generative AI by Microsoft and LinkedIn}{June 2024}
+    {}{}
+
+  \resumeSubheading
+    {Developed generative AI skills at an IIT Delhi-led workshop organized by NxtWave.}{May 2024}
+    {}{}
+
+\resumeSubHeadingListEnd
+
+
+    
+    \vspace{-3.0mm}
+    
+    % \resumeSubheading
+    %   {Company Name}{City}
+    %   {Your Role}{Event dates}
+    %   \vspace{-2.0mm}
+    %   \resumeItemListStart
+    % \item {Work description line 1}
+    % \item {Work description line 2}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{} % Position
+    {Managed social media for multiple clubs during ENYUGMA 2023} %Club,Event
+    {Sep 2023-Nov 2023} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Achievement } % Award
+    {Achieved 1st place as Parade Team at UDYATVA 2024.
+} % Event
+    {January 2024} %Event Year
+    
+\resumePOR{Achievement } % Award
+    {Runner-up in Manikarnika Art Gallery’s Photography Contest
+
+} % Event
+    {February 2025} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
